@@ -1,0 +1,158 @@
+@font-face {
+    font-family: sansation;
+    src: url(../font/SansationLight.woff);
+}
+@font-face {
+    font-family: sansation;
+    src: url(../font/SansationBold.woff);
+    font-weight: bold;
+}
+body,
+html {
+    overflow: hidden;
+    font-family: sansation;
+    color: white;
+}
+a {
+    style: none;
+    color: #ccc;
+    font-weight: bold;
+}
+h1 {
+    font-weight: bold;
+    margin: auto;
+}
+#container {
+    width: 100%;
+    height: 100vh;
+}
+/* shapes */
+
+.oval {
+    width: 0.1%;
+    height: 30pt;
+    position: absolute;
+    display: none;
+    background: white;
+}
+/* si kumis */
+
+#kumis {
+    background: url(../image/rito_sprite.png);
+    width: 5%;
+    height: 12%;
+    padding-bottom: 5%;
+    position: absolute;
+    top: 70%;
+    right: 80%;
+    background-size: 1000%;
+}
+.kumis-right {
+    animation: walking-kumis-right 0.5s steps(4) infinite;
+}
+@keyframes walking-kumis-right {
+    from {
+        background-position: 67.7% 0;
+    }
+    to {
+        background-position: 103.6% 0;
+    }
+}
+.kumis-left {
+    animation: walking-kumis-left 0.5s steps(4) infinite;
+}
+@keyframes walking-kumis-left {
+    from {
+        background-position: 32.3% 0;
+    }
+    to {
+        background-position: -3.4% 0;
+    }
+}
+.kumis-stop {
+    background-position: 50% 0 !important;
+}
+.kumis-stop-1 {
+    background-position: 50% 100% !important;
+}
+.kumis-right-1 {
+    animation: walking-kumis-right-1 0.5s steps(4) infinite;
+}
+@keyframes walking-kumis-right-1 {
+    from {
+        background-position: 67.3% 100%;
+    }
+    to {
+        background-position: 104.65% 100%;
+    }
+}
+.kumis-left-1 {
+    animation: walking-kumis-left-1 0.5s steps(4) infinite;
+}
+@keyframes walking-kumis-left-1 {
+    from {
+        background-position: 32.6% 100%;
+    }
+    to {
+        background-position: -4.35% 100%;
+    }
+}
+/* background */
+
+#background {
+    width: 200%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.layer {
+    background-color: rgba(100, 100, 100, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+}
+.image {
+    height: 100vh;
+    position: absolute;
+}
+/*text*/
+
+#text1 {
+    position: fixed;
+    top: 10%;
+    margin-left: 70%;
+    width: 20%;
+}
+.hovering {
+    position: absolute;
+    width: 20%;
+    opacity: 0;
+}
+/*line*/
+
+hr {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 15%;
+    border: 5pt solid #570009;
+    opacity: 0;
+}
+/*mobile*/
+
+#mobile {
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+}
+.mobile-layer {
+    background-color: rgba(100, 100, 100, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+}
